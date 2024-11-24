@@ -148,7 +148,7 @@ JOIN Alergeni ON Ingrediente.id_ingredient = Alergeni.aid_ingredient
 WHERE Alergeni.nume_alergen = 'Gluten';
 
 --clienti care au rezervat mese cu mai mult de 4 locuri
-SELECT Clienti.nume, Clienti.prenume, Mese.nr_locuri
+SELECT distinct Clienti.nume, Clienti.prenume, Mese.nr_locuri
 FROM Rezervari
 JOIN Clienti ON Rezervari.rid_client = Clienti.id_client
 JOIN Mese ON Rezervari.rid_masa = Mese.id_masa
